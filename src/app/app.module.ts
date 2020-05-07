@@ -4,17 +4,12 @@ import { NgModule } from '@angular/core';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { HttpClientModule } from '@angular/common/http';
 import { routing } from './app.routing'
-import { CursoEditComponent } from '../app/curso/pages/curso-edit/curso-edit.component';
-import { CursoListComponent } from '../app/curso/pages/curso-list/curso-list.component';
 import { SharedModule } from '../app/share/shared.module';
-
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CursoEditComponent,
-    CursoListComponent
   ],
   imports: [
     BrowserModule,
