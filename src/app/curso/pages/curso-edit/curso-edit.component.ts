@@ -9,13 +9,10 @@ export class CursoEditComponent implements OnInit {
 
   constructor(
   ) { }
-
   ngOnInit(): void {
   }
-
   onSubmit() {
   }
-
   onCancel() {
 
   }
