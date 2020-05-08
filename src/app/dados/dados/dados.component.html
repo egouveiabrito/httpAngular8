@@ -1,39 +1,38 @@
 <br>
+<!-- Titulo-->
+<div class="card-header card mt-2">
 
-<div class="card mt-3" *ngIf="(DadosAssociados$.length > 0)">
-    <div class="card-body">
+    <ng-container *ngIf="(DadosAssociados$?.length > 0); then HeaderDadosAssociados; else HeaderDadosDesassociados">
+    </ng-container>
+
+    <ng-template #HeaderDadosAssociados>
         <h5 class="card-title">Seus dados do Pix</h5>
         <p class="card-text">Associe dados a conta</p>
         <p class="card-text">Entenda como funciona</p>
-    </div>
-</div>
+    </ng-template>
 
-<div class="card mt-3" *ngIf="(DadosAssociados$.length == 0)">
-    <div class="card-body">
+    <ng-template #HeaderDadosDesassociados>
         <h5 class="card-title">Associe seus dados Pix</h5>
         <p class="card-text">Entenda como funciona</p>
-    </div>
+    </ng-template>
 </div>
 
-<div class="card mt-3" *ngIf="(DadosAssociados$.length > 0)">
+<!-- Dados Associados -->
+<div class="card mt-2" *ngIf="(DadosAssociados$?.length > 0)">
     <div class="card-header">
-        <div class="float-left">
-            <h5>Dados Associados</h5>
+        <div *ngIf="(DadosAssociados$.length > 0)">
+            <h5 class="card-title">Dados associados a sua conta</h5>
         </div>
     </div>
     <div class="card-body ">
-        <table class="table table-striped" *ngIf="(DadosAssociados$) as DadosAssociados; else loading ">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                </tr>
-            </thead>
+        <table class="table table-hover" *ngIf="(DadosAssociados$) as DadosAssociados; else loading">
             <tbody>
                 <tr *ngFor="let item of DadosAssociados$">
-                    <th scope="col ">{{ item.Tipo }}<br>{{ item.DescricaoComMascara }}</th>
+                    <th scope="col ">{{ item.Tipo }}
+                        <p *ngIf=(item.Favorito)>(favorito)</p><br>{{ item.DescricaoComMascara }}
+                    </th>
                     <td>
                         <button class="btn btn-outline-danger mb-1 btn-sm" type="button">...</button>
-
                     </td>
                 </tr>
             </tbody>
@@ -44,22 +43,26 @@
     </div>
 </div>
 
-<div class="card mt-3" *ngIf="(DadosDesassociados$.length > 0)">
+<!-- Dados Desassociados -->
+<div class="card mt-2" *ngIf="(DadosDesassociados$?.length > 0)">
+
     <div class="card-header">
-        <div class="float-left">
-            <h5>Dados Desassociados</h5>
+        <div *ngIf="(DadosAssociados$.length == 0)">
+            <h5 class="card-title">Selecione um dos dados para associar</h5>
+            <p class="card-text">Associe até cinco dados por conta</p>
+        </div>
+        <div *ngIf="(DadosAssociados$.length > 0)">
+            <h5 class="card-title">Dados disponíveis para associar</h5>
+            <p class="card-text">Selecione um dos dados para associar</p>
         </div>
     </div>
     <div class="card-body ">
-        <table class="table table-striped" *ngIf="(DadosDesassociados$) as DadosDesassociados; else loading">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                </tr>
-            </thead>
+        <table class="table table-hover" *ngIf="(DadosDesassociados$) as DadosDesassociados; else loading">
             <tbody>
                 <tr *ngFor="let item of DadosDesassociados$">
-                    <th scope="col ">{{ item.Tipo }}<br>{{ item.DescricaoComMascara }}</th>
+                    <th scope="col ">{{ item.Tipo }}
+                        <p *ngIf=(item.Favorito)>(favorito)</p><br>{{ item.DescricaoComMascara }}
+                    </th>
                     <td>
                         <button class="btn btn-outline-danger mb-1 btn-sm" type="button">></button>
                     </td>
@@ -70,4 +73,9 @@
             <span>Carregando Chaves...</span>
         </ng-template>
     </div>
+</div>
+
+<!-- Alert de mais de 5 contas -->
+<div class="alert alert-primary" role="alert" *ngIf="(DadosAssociados$?.length == 5)">
+    Você já associou o número máximo <br> de dados por conta. Para associar novos dados <br> desassocie os dados associados.
 </div>

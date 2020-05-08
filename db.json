@@ -1,53 +1,67 @@
 {
     "DadosDesassociados": [{
-            "DescricaoComMascara": "****-9898",
-            "DescricaoSemMascara": "9898-9898",
-            "Tipo": "Celular"
+            "DescricaoComMascara": "eds****@gmail.com",
+            "DescricaoSemMascara": "edson@gmail.com",
+            "Tipo": "Email",
+            "Favorito": false
         },
         {
-            "DescricaoComMascara": "****@gmail.com",
+            "DescricaoComMascara": "eds****@gmail.com",
             "DescricaoSemMascara": "edson@gmail.com",
-            "Tipo": "Email"
-        },
-        {
-            "DescricaoComMascara": "****@gmail.com",
-            "DescricaoSemMascara": "edson@gmail.com",
-            "Tipo": "Email"
+            "Tipo": "Email",
+            "Favorito": false
         },
         {
             "DescricaoComMascara": "********900",
             "DescricaoSemMascara": "09307306900",
-            "Tipo": "CPF"
+            "Tipo": "CPF",
+            "Favorito": false
         },
         {
             "DescricaoComMascara": "****-9898",
             "DescricaoSemMascara": "9898-9898",
-            "Tipo": "Celular"
+            "Tipo": "Celular",
+            "Favorito": false
         },
         {
             "DescricaoComMascara": "****-9898",
             "DescricaoSemMascara": "9898-9898",
-            "Tipo": "Celular"
+            "Tipo": "Celular",
+            "Favorito": false
         },
         {
             "DescricaoComMascara": "****-9898",
             "DescricaoSemMascara": "9898-9898",
-            "Tipo": "Celular"
+            "Tipo": "Celular",
+            "Favorito": false
         },
         {
             "DescricaoComMascara": "****-9898",
             "DescricaoSemMascara": "9898-9898",
-            "Tipo": "Celular"
+            "Tipo": "Celular",
+            "Favorito": false
         }
     ],
-
     "DadosAssociados": [{
-        "DescricaoComMascara": "****-9898",
-        "DescricaoSemMascara": "9898-9898",
-        "Tipo": "Celular"
-    }],
 
-
+            "DescricaoComMascara": "****-9898",
+            "DescricaoSemMascara": "9898-9898",
+            "Tipo": "Celular",
+            "Favorito": true
+        },
+        {
+            "DescricaoComMascara": "****-75541544",
+            "DescricaoSemMascara": "8454-87DD-oddU-75541544",
+            "Tipo": "EVP",
+            "Favorito": false
+        },
+        {
+            "DescricaoComMascara": "eds****@gmail.com",
+            "DescricaoSemMascara": "edson@gmail.com",
+            "Tipo": "Email",
+            "Favorito": false
+        }
+    ],
     "cursos": [{
             "id": 1,
             "nome": "Angular"
@@ -77,5 +91,4 @@
             "nome": "Material 4"
         }
     ]
-
 }
