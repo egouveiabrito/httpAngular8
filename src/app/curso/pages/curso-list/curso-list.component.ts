@@ -11,7 +11,6 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
   templateUrl: './curso-list.component.html',
   styleUrls: ['./curso-list.component.css'],
   preserveWhitespaces: true
-
 })
 export class CursoListComponent implements OnInit {
 
@@ -42,6 +41,7 @@ export class CursoListComponent implements OnInit {
   onDelete(id) {
 
     const result$ = this.alertService.showConfirm('Confirmacao', 'Tem certeza que deseja remover esse curso?');
+    
     result$.asObservable()
       .pipe(
         take(1),
