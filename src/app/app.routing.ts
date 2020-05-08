@@ -10,8 +10,6 @@ const APP_ROUTES: Routes = [
     { path: 'editar/:id', component: CursoFormComponent },
     { path: 'cursos', component: CursoListComponent },
     { path: 'dados', component: DadosComponent },
-
-    { path: '**', redirectTo: '' }
 ];
 
 export const routing = RouterModule.forRoot(APP_ROUTES)
