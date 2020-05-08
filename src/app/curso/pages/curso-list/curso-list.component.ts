@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CursosService } from "../../service/cursos.service";
-import { Observable } from 'rxjs/internal/Observable';
 import { Curso } from '../../entity/curso';
-import { catchError } from 'rxjs/operators';
-import { empty, Subject } from 'rxjs';
+import { Observable, empty, of, Subject, EMPTY } from 'rxjs';
+import { catchError, switchMap, take } from 'rxjs/operators';
 import { AlertModalService } from '../../../share/alert-modal.service';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
@@ -39,14 +38,28 @@ export class CursoListComponent implements OnInit {
       })
     );
   }
-  
 
   onDelete(id) {
+
+    const result$ = this.alertService.showConfirm('Confirmacao', 'Tem certeza que deseja remover esse curso?');
+    result$.asObservable()
+      .pipe(
+        take(1),
+        switchMap(result => result ? this.service.remove(id) : EMPTY)
+      )
+      .subscribe(
+        success => {
+          this.onRefresh();
+        },
+        error => {
+          this.alertService.showAlertDanger('Erro ao remover curso. Tente novamente mais tarde.');
+        }
+      );
   }
 
   onEdit(id) {
   }
-
+  
   handleError() {
     this.alertService.showAlertDanger('Erro ao carregar cursos. Tente novamente mais tarde.');
   }
