@@ -1,0 +1,73 @@
+<br>
+
+<div class="card mt-3" *ngIf="(DadosAssociados$.length > 0)">
+    <div class="card-body">
+        <h5 class="card-title">Seus dados do Pix</h5>
+        <p class="card-text">Associe dados a conta</p>
+        <p class="card-text">Entenda como funciona</p>
+    </div>
+</div>
+
+<div class="card mt-3" *ngIf="(DadosAssociados$.length == 0)">
+    <div class="card-body">
+        <h5 class="card-title">Associe seus dados Pix</h5>
+        <p class="card-text">Entenda como funciona</p>
+    </div>
+</div>
+
+<div class="card mt-3" *ngIf="(DadosAssociados$.length > 0)">
+    <div class="card-header">
+        <div class="float-left">
+            <h5>Dados Associados</h5>
+        </div>
+    </div>
+    <div class="card-body ">
+        <table class="table table-striped" *ngIf="(DadosAssociados$) as DadosAssociados; else loading ">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of DadosAssociados$">
+                    <th scope="col ">{{ item.Tipo }}<br>{{ item.DescricaoComMascara }}</th>
+                    <td>
+                        <button class="btn btn-outline-danger mb-1 btn-sm" type="button">...</button>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ng-template #loading>
+            <span>Carregando Chaves...</span>
+        </ng-template>
+    </div>
+</div>
+
+<div class="card mt-3" *ngIf="(DadosDesassociados$.length > 0)">
+    <div class="card-header">
+        <div class="float-left">
+            <h5>Dados Desassociados</h5>
+        </div>
+    </div>
+    <div class="card-body ">
+        <table class="table table-striped" *ngIf="(DadosDesassociados$) as DadosDesassociados; else loading">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of DadosDesassociados$">
+                    <th scope="col ">{{ item.Tipo }}<br>{{ item.DescricaoComMascara }}</th>
+                    <td>
+                        <button class="btn btn-outline-danger mb-1 btn-sm" type="button">></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ng-template #loading>
+            <span>Carregando Chaves...</span>
+        </ng-template>
+    </div>
+</div>

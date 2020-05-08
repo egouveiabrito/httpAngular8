@@ -7,13 +7,14 @@ import { routing } from './app.routing'
 import { SharedModule } from '../app/share/shared.module';
 import { CursoEditComponent } from "../app/curso/pages/curso-edit/curso-edit.component";
 import { CursoListComponent } from "../app/curso/pages/curso-list/curso-list.component";
-
+import { DadosComponent } from '../app/dados/dados/dados.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CursoListComponent,
-    CursoEditComponent
+    CursoEditComponent,
+    DadosComponent
   ],
   imports: [
     BrowserModule,
