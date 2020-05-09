@@ -13,7 +13,7 @@ import { Location } from "@angular/common";
 
 export class CursoFormComponent implements OnInit {
 
-  curso: Curso = { id: 0, nome: "" };
+  curso: Curso = { id: 0, nome: "", professor: "", horario:"", tipo:"" };
 
   constructor(
     private service: CursosService,
@@ -24,7 +24,7 @@ export class CursoFormComponent implements OnInit {
 
   ngOnInit() 
   {
-    this.atribuirCursoSelecionado();
+    this.curso = this.route.snapshot.data['curso'];
   }
 
   onSubmit(f) {
@@ -50,11 +50,5 @@ export class CursoFormComponent implements OnInit {
       console.log(error);
     }
   }
-
-  atribuirCursoSelecionado()
-  {
-    const cursoSelecionado = this.route.snapshot.data['curso'];
-    this.curso.nome = cursoSelecionado.nome;
-    this.curso.id = cursoSelecionado.id;
-  }
 }
+ 

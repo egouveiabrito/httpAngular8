@@ -3,6 +3,7 @@ import {  ActivatedRouteSnapshot, RouterStateSnapshot, Resolve } from '@angular/
 import { Observable, of } from 'rxjs';
 import { Curso } from '../curso/entity/curso';
 import { CursosService } from '../curso/service/cursos.service';
+import { strict } from 'assert';
 
 @Injectable({
     providedIn: 'root'
@@ -16,7 +17,10 @@ export class CursoResolverGuard implements Resolve<Curso> {
         }
         return of({
             id: null,
-            nome: null
+            nome: null,
+            professor: null,
+            horario: null,
+            tipo: null,
         });
     }
 }
