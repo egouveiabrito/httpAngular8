@@ -7,6 +7,7 @@ import { CursoResolverGuard } from './curso-resolver.guard.';
 
 const routes: Routes = [
     { path: '', component: CursoListComponent },
+    
     {
         path: 'novo',
         component: CursoFormComponent,

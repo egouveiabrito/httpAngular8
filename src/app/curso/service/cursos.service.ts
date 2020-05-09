@@ -19,7 +19,7 @@ export class CursosService {
   }
 
   public loadByID(id) {
-    return this.http.get<Curso>(`${this.API}/cursos${id}`).pipe();
+    return this.http.get<Curso>(`${this.API}/cursos/${id}`).pipe();
   }
 
   private create(curso) {

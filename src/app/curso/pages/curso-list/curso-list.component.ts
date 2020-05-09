@@ -62,7 +62,7 @@ export class CursoListComponent implements OnInit {
 
   onEdit(id) {
     
-    this.router.navigate(['editar', id], { relativeTo: this.route });
+      this.router.navigate(['editar', id], {relativeTo: this.route})
   }
   
   handleError() {

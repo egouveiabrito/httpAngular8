@@ -10,6 +10,7 @@ import { Location } from "@angular/common";
   templateUrl: './curso-form.component.html',
   styleUrls: ['./curso-form.component.css']
 })
+
 export class CursoFormComponent implements OnInit {
 
   curso: Curso = { id: 0, nome: "" };
@@ -21,10 +22,9 @@ export class CursoFormComponent implements OnInit {
     private route: ActivatedRoute
   ) { }
 
-  ngOnInit() {
-
-    const curso = this.route.snapshot.data['curso'];
-    console.log(curso);
+  ngOnInit() 
+  {
+    this.atribuirCursoSelecionado();
   }
 
   onSubmit(f) {
@@ -49,5 +49,12 @@ export class CursoFormComponent implements OnInit {
     catch (error) {
       console.log(error);
     }
+  }
+
+  atribuirCursoSelecionado()
+  {
+    const cursoSelecionado = this.route.snapshot.data['curso'];
+    this.curso.nome = cursoSelecionado.nome;
+    this.curso.id = cursoSelecionado.id;
   }
 }
