@@ -1,113 +1,116 @@
 {
-    "DadosDesassociados": [{
-            "DescricaoComMascara": "eds****@gmail.com",
-            "DescricaoSemMascara": "edson@gmail.com",
-            "Tipo": "Email",
-            "Favorito": false
-        },
-        {
-            "DescricaoComMascara": "eds****@gmail.com",
-            "DescricaoSemMascara": "edson@gmail.com",
-            "Tipo": "Email",
-            "Favorito": false
-        },
-        {
-            "DescricaoComMascara": "********900",
-            "DescricaoSemMascara": "09307306900",
-            "Tipo": "CPF",
-            "Favorito": false
-        },
-        {
-            "DescricaoComMascara": "****-9898",
-            "DescricaoSemMascara": "9898-9898",
-            "Tipo": "Celular",
-            "Favorito": false
-        },
-        {
-            "DescricaoComMascara": "****-9898",
-            "DescricaoSemMascara": "9898-9898",
-            "Tipo": "Celular",
-            "Favorito": false
-        },
-        {
-            "DescricaoComMascara": "****-9898",
-            "DescricaoSemMascara": "9898-9898",
-            "Tipo": "Celular",
-            "Favorito": false
-        },
-        {
-            "DescricaoComMascara": "****-9898",
-            "DescricaoSemMascara": "9898-9898",
-            "Tipo": "Celular",
-            "Favorito": false
-        }
-    ],
-    "DadosAssociados": [{
-            "DescricaoComMascara": "****-9898",
-            "DescricaoSemMascara": "9898-9898",
-            "Tipo": "Celular",
-            "Favorito": true
-        },
-        {
-            "DescricaoComMascara": "****-75541544",
-            "DescricaoSemMascara": "8454-87DD-oddU-75541544",
-            "Tipo": "EVP",
-            "Favorito": false
-        },
-        {
-            "DescricaoComMascara": "eds****@gmail.com",
-            "DescricaoSemMascara": "edson@gmail.com",
-            "Tipo": "Email",
-            "Favorito": false
-        }
-    ],
-    "cursos": [{
-            "nome": "Angular Material",
-            "id": 3
-        },
-        {
-            "nome": "Material",
-            "id": 4
-        },
-        {
-            "id": 5,
-            "nome": "aa"
-        },
-        {
-            "nome": "Java",
-            "id": 7
-        },
-        {
-            "id": 10,
-            "nome": "C#"
-        },
-        {
-            "id": 87,
-            "nome": "C#"
-        },
-        {
-            "id": 88,
-            "nome": "C#"
-        },
-        {
-            "id": 29,
-            "nome": "C#"
-        },
-        {
-            "id": 44,
-            "nome": "C#"
-        },
-        {
-            "id": 55,
-            "nome": "C#"
-        },
-        {
-            "id": 66,
-            "nome": "C#"
-        },
-        {
-            "id": 78,
-            "nome": "C#"
-        }
-    ]
+  "DadosDesassociados": [
+    {
+      "DescricaoComMascara": "eds****@gmail.com",
+      "DescricaoSemMascara": "edson@gmail.com",
+      "Tipo": "Email",
+      "Favorito": false
+    },
+    {
+      "DescricaoComMascara": "eds****@gmail.com",
+      "DescricaoSemMascara": "edson@gmail.com",
+      "Tipo": "Email",
+      "Favorito": false
+    },
+    {
+      "DescricaoComMascara": "********900",
+      "DescricaoSemMascara": "09307306900",
+      "Tipo": "CPF",
+      "Favorito": false
+    },
+    {
+      "DescricaoComMascara": "****-9898",
+      "DescricaoSemMascara": "9898-9898",
+      "Tipo": "Celular",
+      "Favorito": false
+    },
+    {
+      "DescricaoComMascara": "****-9898",
+      "DescricaoSemMascara": "9898-9898",
+      "Tipo": "Celular",
+      "Favorito": false
+    },
+    {
+      "DescricaoComMascara": "****-9898",
+      "DescricaoSemMascara": "9898-9898",
+      "Tipo": "Celular",
+      "Favorito": false
+    },
+    {
+      "DescricaoComMascara": "****-9898",
+      "DescricaoSemMascara": "9898-9898",
+      "Tipo": "Celular",
+      "Favorito": false
+    }
+  ],
+  "DadosAssociados": [
+    {
+      "DescricaoComMascara": "****-9898",
+      "DescricaoSemMascara": "9898-9898",
+      "Tipo": "Celular",
+      "Favorito": true
+    },
+    {
+      "DescricaoComMascara": "****-75541544",
+      "DescricaoSemMascara": "8454-87DD-oddU-75541544",
+      "Tipo": "EVP",
+      "Favorito": false
+    },
+    {
+      "DescricaoComMascara": "eds****@gmail.com",
+      "DescricaoSemMascara": "edson@gmail.com",
+      "Tipo": "Email",
+      "Favorito": false
+    }
+  ],
+  "cursos": [
+    {
+      "id": 3,
+      "nome": "Angular Material"
+    },
+    {
+      "nome": "Material",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "nome": "aa"
+    },
+    {
+      "nome": "Java",
+      "id": 7
+    },
+    {
+      "id": 10,
+      "nome": "C#"
+    },
+    {
+      "id": 87,
+      "nome": "C#"
+    },
+    {
+      "id": 88,
+      "nome": "C#"
+    },
+    {
+      "id": 29,
+      "nome": "C#"
+    },
+    {
+      "id": 44,
+      "nome": "C#"
+    },
+    {
+      "id": 55,
+      "nome": "C#"
+    },
+    {
+      "id": 66,
+      "nome": "C#"
+    },
+    {
+      "id": 78,
+      "nome": "C#"
+    }
+  ]
 }

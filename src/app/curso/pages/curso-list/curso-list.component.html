@@ -4,8 +4,8 @@
             <h4>Cursos da API</h4>
         </div>
         <div class="float-right">
-            <button type="button" class="btn btn-primary" [routerLink]="['novo']">Novo Curso</button>
-            <button type="button " class="btn btn-secondary " (click)="onRefresh() ">Atualizar</button>
+            <button type="button" class="btn btn-danger" style="background-color:red; color:white;" [routerLink]="['novo']">Novo Curso</button>
+            <button type="button " class="btn btn-default" style="background-color:red; color:white;" (click)="onRefresh() ">Atualizar</button>
         </div>
     </div>
     <div class="card-body ">
@@ -21,9 +21,9 @@
                     <th scope="col ">{{ curso.id }}</th>
                     <td scope="col ">{{ curso.nome }}</td>
                     <td>
-                        <button class="btn btn-outline-warning mb-1 btn-sm" (click)="onEdit(curso.id)">Atualizar</button>
+                        <button class="btn btn-outline-danger mb-1 btn-sm" (click)="onEdit(curso.id)">Atualizar</button>
 
-                        <button class="btn btn-outline-danger mb-1 btn-sm" type="button" (click)="onDelete(curso.id)">Delete</button>
+                        <button class="btn btn-outline-danger mb-1 btn-sm" type="button" (click)="onDelete(curso.id)" style="background-color:red; color:white;">Delete</button>
                     </td>
                 </tr>
             </tbody>
