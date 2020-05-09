@@ -18,11 +18,9 @@ export class CursoListComponent implements OnInit {
   deleteModalRef: BsModalRef;
 
   cursos$: Observable<Curso[]>;
-  
   error$ = new Subject<boolean>();
 
   page: number = 1;
-
   count: number = 5;
 
   constructor(
@@ -65,7 +63,6 @@ export class CursoListComponent implements OnInit {
   }
 
   onEdit(id) {
-    
       this.router.navigate(['editar', id], {relativeTo: this.route})
   }
   
