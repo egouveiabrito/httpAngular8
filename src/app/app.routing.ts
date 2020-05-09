@@ -3,9 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
     {
-        path: '', pathMatch: 'full', redirectTo: 'busca-reativa'
-    },
-    {
         path: 'cursos',
         loadChildren: () => import('./curso/curso.module').then(m => m.CursosModule)
     },
