@@ -1,16 +1,16 @@
-<div class="card mt-3">
-    <div class="card-header">
-        <div class="float-left">
-            <h4>Novo Curso</h4>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="card mt-3">
+        <div class="card-header">
+            <div class="float-left">
+                <h4>Novo Curso</h4>
+            </div>
         </div>
-    </div>
-    <div class="card-body">
-        <form>
+        <div class="card-body">
             <div class="form-group">
-                <label for="exampleInputEmail1">Informe o nome do curso:</label>
-                <input type="text" class="form-control" formControlName="nome" placeholder="digite aqui...">
+                <label>Informe o nome do curso:</label>
+                <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="curso.nome">
             </div>
             <button type="submit" class="btn btn-outline-warning mb-1 btn-sm">Submit</button>
-        </form>
+        </div>
     </div>
-</div>
+</form>

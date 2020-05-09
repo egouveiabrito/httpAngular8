@@ -1,3 +1,4 @@
+import { Routes, Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { CursosService } from "../../service/cursos.service";
 import { Curso } from '../../entity/curso';
@@ -23,6 +24,8 @@ export class CursoListComponent implements OnInit {
   constructor(
     private service: CursosService,
     private alertService: AlertModalService,
+    private router: Router,
+    private route: ActivatedRoute
   ) { }
   
   ngOnInit() {
@@ -58,6 +61,8 @@ export class CursoListComponent implements OnInit {
   }
 
   onEdit(id) {
+    
+    this.router.navigate(['editar', id], { relativeTo: this.route });
   }
   
   handleError() {

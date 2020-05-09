@@ -1,15 +1,22 @@
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CursoListComponent } from '../app/curso/pages/curso-list/curso-list.component';
-import { CursoFormComponent } from './curso/pages/curso-form/curso-form.component';
-import { DadosComponent } from './dados/dados/dados.component';
-
-
-const APP_ROUTES: Routes = [
-    { path: 'novo', component: CursoFormComponent },
-    { path: 'editar/:id', component: CursoFormComponent },
-    { path: 'cursos', component: CursoListComponent },
-    { path: 'dados', component: DadosComponent },
+const routes: Routes = [
+    {
+        path: '', pathMatch: 'full', redirectTo: 'busca-reativa'
+    },
+    {
+        path: 'cursos',
+        loadChildren: () => import('./curso/curso.module').then(m => m.CursosModule)
+    },
+    {
+        path: 'dados',
+        loadChildren: () => import('./dados/dados.module').then(m => m.DadosModule)
+    },
+    
 ];
-
-export const routing = RouterModule.forRoot(APP_ROUTES)
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+})
+export class AppRoutingModule { }

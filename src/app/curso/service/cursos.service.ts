@@ -19,22 +19,25 @@ export class CursosService {
   }
 
   public loadByID(id) {
-    return this.http.get<Curso[]>(`${this.API}/cursos${id}`).pipe();
+    return this.http.get<Curso>(`${this.API}/cursos${id}`).pipe();
   }
 
   private create(curso) {
+
     return this.http.post(`${this.API}/cursos`, curso).pipe(take(1));
   }
 
   private update(curso) {
+    console.log(curso);
     return this.http.put(`${this.API}/cursos/${curso.id}`, curso).pipe(take(1));
   }
 
   save(curso) {
+    
     if (curso.id) {
       return this.update(curso);
     }
-    console.log(curso);
+
     return this.create(curso);
   }
 

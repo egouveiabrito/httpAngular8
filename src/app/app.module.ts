@@ -1,34 +1,24 @@
-import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ModalModule } from 'ngx-bootstrap/modal';
+
+import { AppRoutingModule  } from './app.routing';
+import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { routing } from './app.routing'
-import { SharedModule } from '../app/share/shared.module';
-import { CursoFormComponent } from "../app/curso/pages/curso-form/curso-form.component";
-import { CursoListComponent } from "../app/curso/pages/curso-list/curso-list.component";
-import { DadosComponent } from '../app/dados/dados/dados.component';
+import { SharedModule } from './share/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CursoListComponent,
-    CursoFormComponent,
-    DadosComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    routing,
+    AppRoutingModule,
     HttpClientModule,
     ModalModule.forRoot(),
     SharedModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
-
-
