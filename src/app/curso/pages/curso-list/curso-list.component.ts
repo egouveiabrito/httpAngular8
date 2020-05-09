@@ -21,6 +21,10 @@ export class CursoListComponent implements OnInit {
   
   error$ = new Subject<boolean>();
 
+  page: number = 1;
+
+  count: number = 5;
+
   constructor(
     private service: CursosService,
     private alertService: AlertModalService,

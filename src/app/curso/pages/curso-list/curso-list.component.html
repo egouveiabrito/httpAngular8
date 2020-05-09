@@ -17,7 +17,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let curso of cursos$ | async ">
+                <tr *ngFor="let curso of cursos | paginate:{itemsPerPage:count, currentPage:page}">
                     <th scope="col ">{{ curso.id }}</th>
                     <td scope="col ">{{ curso.nome }}</td>
                     <td>
@@ -31,5 +31,8 @@
         <ng-template #loading>
             <span>Carregando Cursos...</span>
         </ng-template>
-
+        <!--inclindo o controle de paginação.-->
+        <div class="text-right">
+            <pagination-controls (pageChange)="page=$event"></pagination-controls>
+        </div>
     </div>
