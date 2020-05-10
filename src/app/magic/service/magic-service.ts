@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Card } from '../card';
-
 import { take, delay, map } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs/internal/Observable';
+import { respondeApiMagic } from '../respondeApiMagic';
 
 @Injectable({
     providedIn: 'root'
@@ -16,9 +15,7 @@ export class CardService {
 
     constructor(private http: HttpClient) { }
 
-    public getCards(): Observable<Card> {        
-        console.log('---| getListDadosDesassociados.post<DadosDesassociados>');
-        return this.http.get<Card>(`${this.API}/cards?page=3`).pipe(delay(2000));
+    public getCards(search: string): Observable<respondeApiMagic> {   
+        return this.http.get<respondeApiMagic>(`${this.API}/cards/search?q=${search}`).pipe(delay(1000)).pipe(take(1));
     }
-    
 }

@@ -5,7 +5,6 @@ import { Curso } from '../../entity/curso';
 import { Observable, empty, Subject, EMPTY } from 'rxjs';
 import { catchError, switchMap, take } from 'rxjs/operators';
 import { AlertModalService } from '../../../share/alert-modal.service';
-import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-curso-list',
@@ -15,7 +14,6 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 })
 export class CursoListComponent implements OnInit {
 
-  deleteModalRef: BsModalRef;
 
   cursos$: Observable<Curso[]>;
   error$ = new Subject<boolean>();

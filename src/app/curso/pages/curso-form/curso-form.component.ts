@@ -36,6 +36,7 @@ export class CursoFormComponent implements OnInit {
         msgSuccess = 'Curso atualizado com sucesso!';
         msgError = 'Erro ao atualizar curso, tente novamente!';
       }
+     console.log(this.curso);
 
       this.service.save(this.curso).subscribe(
         success => {

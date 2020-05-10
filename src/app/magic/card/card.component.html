@@ -5,9 +5,36 @@
         </div>
     </div>
     <div class="card-body ">
-
-        <ng-template #loading>
-            <span>Carregando Cursos...</span>
-        </ng-template>
-
+        <div class="form-group">
+            <input type="text" placeholder="search card..." [style.border-color]="IsValidade == false ? 'red' : '#ced4da'" required minlength="4" class="form-control" id="search" name="search" [(ngModel)]="search">
+        </div>
+        <button type="button" (click)="OnSearch()" class="btn btn-danger" style="background-color:red; color:white; ">Search</button>
+    </div>
+    <div class="text-right ">
+        <pagination-controls (pageChange)="pagination.page=$event "></pagination-controls>
+    </div>
+    <div class="card-body ">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#Image</th>
+                    <th>Name</th>
+                    <th>Type Line</th>
+                    <th>Lang</th>
+                    <th>Release</th>
+                    <th>Layout</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let card of Cards$ | paginate:{itemsPerPage:pagination.count, currentPage:pagination.page} ">
+                    <td class="w-25 ">
+                        <img src="{{card.image_uris.small}} " alt="Sheep ">
+                        <th scope="col ">{{ card.name }}</th>
+                        <th scope="col ">{{ card.lang }}</th>
+                        <th scope="col ">{{ card.released_at }}</th>
+                        <th scope="col ">{{ card.layout }}</th>
+                        <th scope="col ">{{ card.type_line }}</th>
+                </tr>
+            </tbody>
+        </table>
     </div>
