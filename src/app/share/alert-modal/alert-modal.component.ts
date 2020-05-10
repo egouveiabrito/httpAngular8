@@ -18,5 +18,4 @@ export class AlertModalComponent implements OnInit {
   onClose() {
     this.bsModalRef.hide();
   }
-
-}
+};

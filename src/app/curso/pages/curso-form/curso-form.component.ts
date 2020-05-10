@@ -1,9 +1,9 @@
 import { ActivatedRoute } from '@angular/router';
 import { Curso } from './../../entity/curso';
 import { Component, OnInit } from '@angular/core';
-import { CursosService } from "../../service/cursos.service";
+import { CursosService } from '../../service/cursos.service';
 import { AlertModalService } from '../../../share/alert-modal.service';
-import { Location } from "@angular/common";
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-curso-form',
@@ -13,7 +13,7 @@ import { Location } from "@angular/common";
 
 export class CursoFormComponent implements OnInit {
 
-  curso: Curso = { id: 0, nome: "", professor: "", horario:"", tipo:"" };
+  curso: Curso = { id: 0, nome: '', professor: '', horario: '', tipo: '' };
 
   constructor(
     private service: CursosService,
@@ -22,8 +22,7 @@ export class CursoFormComponent implements OnInit {
     private route: ActivatedRoute
   ) { }
 
-  ngOnInit() 
-  {
+  ngOnInit() {
     this.curso = this.route.snapshot.data['curso'];
   }
 
@@ -51,4 +50,4 @@ export class CursoFormComponent implements OnInit {
     }
   }
 }
- 
+

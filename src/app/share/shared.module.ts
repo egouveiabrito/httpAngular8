@@ -11,4 +11,4 @@ import { ConfirmModalComponent } from './confirm-modal/confirm-modal.component';
     exports: [AlertModalComponent],
     entryComponents: [AlertModalComponent]
 })
-export class SharedModule { }
+export class SharedModule { };

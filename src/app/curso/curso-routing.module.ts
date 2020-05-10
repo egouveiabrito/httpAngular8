@@ -6,8 +6,7 @@ import { CursoResolverGuard } from './curso-resolver.guard.';
 
 
 const routes: Routes = [
-    { path: '', component: CursoListComponent },
-    
+    { path: '', component: CursoListComponent },    
     {
         path: 'novo',
         component: CursoFormComponent,
@@ -28,4 +27,4 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class CursosRoutingModule { }
+export class CursosRoutingModule {};

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DadosService } from "../../../app/dados/service/dados-service";
-import { DadosAssociados } from "../entity/dados-associados";
-import { DadosDesassociados } from "../entity/dados-desassociados";
+import { DadosService } from '../../../app/dados/service/dados-service';
+import { DadosAssociados } from '../entity/dados-associados';
+import { DadosDesassociados } from '../entity/dados-desassociados';
 
 @Component({
   selector: 'app-dados',

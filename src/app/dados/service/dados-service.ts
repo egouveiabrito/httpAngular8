@@ -17,17 +17,12 @@ export class DadosService {
 
     constructor(private http: HttpClient) { }
 
-    public getListDadosDesassociados(): Observable<DadosDesassociados[]> {
-        
+    public getListDadosDesassociados(): Observable<DadosDesassociados[]> {        
         console.log('---| getListDadosDesassociados.post<DadosDesassociados>');
-
         return this.http.get<DadosDesassociados[]>(`${this.API}/DadosDesassociados`).pipe(delay(2000));
     }
-
     public getListDadosAssociados(): Observable<DadosAssociados[]> {
-        
         console.log('---| getListDadosAssociados.post<DadosAssociados>');
-
         return this.http.get<DadosAssociados[]>(`${this.API}/DadosAssociados`).pipe(delay(2000));
     }
 }

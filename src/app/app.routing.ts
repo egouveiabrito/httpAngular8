@@ -10,10 +10,13 @@ const routes: Routes = [
         path: 'dados',
         loadChildren: () => import('./dados/dados.module').then(m => m.DadosModule)
     },
-    
+    {
+        path: 'magic',
+        loadChildren: () => import('./magic/card.module').then(m => m.CardModule)
+    },      
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { };

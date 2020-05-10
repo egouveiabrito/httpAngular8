@@ -16,4 +16,4 @@ import { CursoFormComponent } from './pages/curso-form/curso-form.component';
     ],
     declarations: [CursoListComponent, CursoFormComponent]
 })
-export class CursosModule { }
+export class CursosModule {};

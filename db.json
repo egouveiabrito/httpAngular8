@@ -67,8 +67,9 @@
     {
       "id": 3,
       "nome": "Angular 8",
-      "professor": "",
-      "horario": ""
+      "professor": "Marcela Silva",
+      "horario": "18:55",
+      "tipo": "Presencial"
     },
     {
       "id": 5,

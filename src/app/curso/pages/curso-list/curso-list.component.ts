@@ -1,8 +1,8 @@
 import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { CursosService } from "../../service/cursos.service";
+import { CursosService } from '../../service/cursos.service';
 import { Curso } from '../../entity/curso';
-import { Observable, empty, of, Subject, EMPTY } from 'rxjs';
+import { Observable, empty, Subject, EMPTY } from 'rxjs';
 import { catchError, switchMap, take } from 'rxjs/operators';
 import { AlertModalService } from '../../../share/alert-modal.service';
 import { BsModalRef } from 'ngx-bootstrap/modal';
@@ -20,8 +20,8 @@ export class CursoListComponent implements OnInit {
   cursos$: Observable<Curso[]>;
   error$ = new Subject<boolean>();
 
-  page: number = 1;
-  count: number = 5;
+  page: 1;
+  count: 5;
 
   constructor(
     private service: CursosService,
@@ -29,7 +29,7 @@ export class CursoListComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute
   ) { }
-  
+
   ngOnInit() {
     this.onRefresh();
   }
@@ -46,7 +46,7 @@ export class CursoListComponent implements OnInit {
   onDelete(id) {
 
     const result$ = this.alertService.showConfirm('Confirmacao', 'Tem certeza que deseja remover esse curso?');
-    
+
     result$.asObservable()
       .pipe(
         take(1),
@@ -63,9 +63,9 @@ export class CursoListComponent implements OnInit {
   }
 
   onEdit(id) {
-      this.router.navigate(['editar', id], {relativeTo: this.route})
+    this.router.navigate(['editar', id], { relativeTo: this.route })
   }
-  
+
   handleError() {
     this.alertService.showAlertDanger('Erro ao carregar cursos. Tente novamente mais tarde.');
   }
