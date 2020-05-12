@@ -1,5 +1,5 @@
 <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-    <div class="card mt-3">
+    <div class="card mt-2">
         <div class="card-header">
             <div class="float-left">
                 <h4>Novo Curso</h4>
@@ -7,20 +7,28 @@
         </div>
         <div class="card-body">
             <div class="form-group">
-                <label>Informe o nome do curso:</label>
-                <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="curso.nome">
+                <div class="col-md-5">
+                    <label>Informe o nome do curso:</label>
+                    <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="curso.nome">
+                </div>
             </div>
             <div class="form-group">
-                <label>Informe o nome do professor:</label>
-                <input type="text" class="form-control" id="professor" name="professor" [(ngModel)]="curso.professor">
+                <div class="col-md-5">
+                    <label>Informe o nome do professor:</label>
+                    <input type="text" class="form-control" id="professor" name="professor" [(ngModel)]="curso.professor">
+                </div>
             </div>
             <div class="form-group">
-                <label>Horário da aula:</label>
-                <input type="text" class="form-control" id="horario" name="horario" [(ngModel)]="curso.horario">
+                <div class="col-md-3">
+                    <label>Data da aula:</label>
+                    <input type="text" class="form-control" autocomplete="off" id="data" bsDatepicker name="data" [(ngModel)]="curso.data">
+                </div>
             </div>
             <div class="form-group">
-                <label>Tipo da aula:</label>
-                <input type="text" class="form-control" id="tipo" name="tipo" [(ngModel)]="curso.tipo">
+                <div class="col-md-2">
+                    <label>Tipo da aula:</label>
+                    <input type="text" class="form-control" id="tipo" name="tipo" [(ngModel)]="curso.tipo">
+                </div>
             </div>
             <button type="submit" class="btn btn-outline-warning mb-1 btn-sm">Submit</button>
         </div>

@@ -5,6 +5,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { CursosRoutingModule  } from './curso-routing.module';
 import { CursoListComponent } from './pages/curso-list/curso-list.component';
 import { CursoFormComponent } from './pages/curso-form/curso-form.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 @NgModule({
     imports: [
@@ -12,8 +13,9 @@ import { CursoFormComponent } from './pages/curso-form/curso-form.component';
         CursosRoutingModule,
         ReactiveFormsModule,
         FormsModule,
-        NgxPaginationModule
+        NgxPaginationModule,
+        BsDatepickerModule.forRoot(),
     ],
-    declarations: [CursoListComponent, CursoFormComponent]
+    declarations: [CursoListComponent, CursoFormComponent],
 })
 export class CursosModule {};

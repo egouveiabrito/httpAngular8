@@ -13,7 +13,7 @@ import { Location } from '@angular/common';
 
 export class CursoFormComponent implements OnInit {
 
-  curso: Curso = { id: 0, nome: '', professor: '', horario: '', tipo: '' };
+  curso: Curso = { id: 0, nome: '', professor: '', data: '', tipo: '' };
 
   constructor(
     private service: CursosService,
@@ -21,6 +21,7 @@ export class CursoFormComponent implements OnInit {
     private location: Location,
     private route: ActivatedRoute
   ) { }
+
 
   ngOnInit() {
     this.curso = this.route.snapshot.data['curso'];

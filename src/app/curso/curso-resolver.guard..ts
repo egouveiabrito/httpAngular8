@@ -18,7 +18,7 @@ export class CursoResolverGuard implements Resolve<Curso> {
             id: null,
             nome: null,
             professor: null,
-            horario: null,
+            data: null,
             tipo: null,
         });
     }
